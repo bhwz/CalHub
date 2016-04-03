@@ -1,0 +1,10 @@
+main: io.github.thecalcium.hub.Hub
+name: CalHub
+version: 0.01
+author: Calcium
+website: https://calcium.pw/
+
+commands:
+  setspawn:
+    description: Sets the world spawn to the issuer's current location
+    usage: /<command>
