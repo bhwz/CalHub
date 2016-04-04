@@ -1,6 +1,7 @@
 package io.github.thecalcium.calhub;
 
 import io.github.thecalcium.calhub.commands.SetSpawnCommand;
+import io.github.thecalcium.calhub.commands.SpawnCommand;
 import io.github.thecalcium.calhub.listeners.PlayerListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,6 +13,7 @@ public class CalHub extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         getCommand("SetSpawn").setExecutor(new SetSpawnCommand(this));
+        getCommand("Spawn").setExecutor(new SpawnCommand(this));
     }
 
     @Override

@@ -8,3 +8,6 @@ commands:
   setspawn:
     description: Sets the world spawn to the issuer's current location
     usage: /<command>
+  spawn:
+    description: Teleports the user the world's spawn point
+    usage: /<command>

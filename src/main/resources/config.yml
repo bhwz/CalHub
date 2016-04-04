@@ -2,4 +2,5 @@ messages:
   join: "&2+&8{PLAYER}"
   quit: "&4-&8{PLAYER}"
   death: "&7{PLAYER} died."
+  spawntp: "&aTeleported to spawn."
   cmdnoperms: "&cYou do not have permission to use this command!"
