@@ -1,6 +1,8 @@
+voidtp: true
 messages:
   join: "&2+&8{PLAYER}"
   quit: "&4-&8{PLAYER}"
   death: "&7{PLAYER} died."
   spawntp: "&aTeleported to spawn."
+  voidtp: "&aYou fell into the void, so we moved you to spawn."
   cmdnoperms: "&cYou do not have permission to use this command!"

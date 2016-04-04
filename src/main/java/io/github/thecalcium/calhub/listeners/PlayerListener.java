@@ -2,6 +2,7 @@ package io.github.thecalcium.calhub.listeners;
 
 import io.github.thecalcium.calhub.CalHub;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -66,8 +67,10 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onVoid(EntityDamageEvent event) {
         if((cfg.getBoolean("voidtp")) && (event.getEntity() instanceof Player)&& (event.getCause().equals(EntityDamageEvent.DamageCause.VOID))) {
-            // TODO: Cancel damage and teleport player to spawn
-            event.setCancelled(false);
+            event.setCancelled(true);
+            Location spawn = event.getEntity().getWorld().getSpawnLocation();
+            event.getEntity().teleport(spawn);
+            event.getEntity().sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("messages.voidtp")));
         }
     }
 }
