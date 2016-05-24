@@ -1,4 +1,4 @@
-main: io.github.thecalcium.hub.Hub
+main: io.github.thecalcium.calhub.CalHub
 name: CalHub
 version: 0.01
 author: Calcium
