@@ -8,3 +8,8 @@ Currently does the following:
 + Spawn management (/setspawn, /spawn)
 + TP to spawn after falling into the void
 + Disables weather changes (can be disabled in the config)
+
+ToDo/Requested:
++ Configurable MOTD on join
++ Option to disable "nature" (growth, trampling, ice form/melt, etc.)
++ Option to disable water/lava flow
