@@ -1,6 +1,6 @@
 main: io.github.thecalcium.calhub.CalHub
 name: CalHub
-version: 0.01
+version: 0.02
 author: Calcium
 website: https://calcium.pw/
 
@@ -11,3 +11,10 @@ commands:
   spawn:
     description: Teleports the user the world's spawn point
     usage: /<command>
+  motd:
+    description: Displays the server's MOTD
+    usage: /<command>
+permissions:
+  calhub.motd:
+    description: Allows viewing of the MOTD on join, and use of the /motd command
+    default: true

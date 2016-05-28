@@ -18,6 +18,6 @@ public class QuitListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
         event.setQuitMessage(ChatColor.translateAlternateColorCodes
-                ('&', cfg.getString("messages.quit").replace("{PLAYER}", event.getPlayer().getName())));
+                ('&', cfg.getString("messages.quit").replace("{PLAYER}", event.getPlayer().getDisplayName())));
     }
 }
