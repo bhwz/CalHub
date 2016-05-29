@@ -22,6 +22,8 @@ public class VoidListener implements Listener {
         if((cfg.getBoolean("voidtp")) && (event.getEntity() instanceof Player) && (event.getCause().equals(EntityDamageEvent.DamageCause.VOID))) {
             event.setCancelled(true);
             Location spawn = event.getEntity().getWorld().getSpawnLocation();
+            spawn.setPitch(((float) cfg.getInt("spawndata.pitch")));
+            spawn.setYaw(((float) cfg.getInt("spawndata.yaw")));
             event.getEntity().teleport(spawn);
             event.getEntity().sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("messages.voidtp")));
         }

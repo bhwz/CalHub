@@ -11,9 +11,11 @@ import org.bukkit.entity.Player;
 
 public class SetSpawnCommand implements CommandExecutor {
 
+    CalHub plugin;
     FileConfiguration cfg;
 
     public SetSpawnCommand(CalHub plugin) {
+        this.plugin = plugin;
         cfg = plugin.getConfig();
     }
 
@@ -29,8 +31,24 @@ public class SetSpawnCommand implements CommandExecutor {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("messages.cmdnoperms")));
                 return true;
             }
+
             Location playerLocation = player.getLocation();
             player.getWorld().setSpawnLocation(playerLocation.getBlockX(), playerLocation.getBlockY(), playerLocation.getBlockZ());
+
+            if (cfg.contains("spawndata.pitch")) {
+                cfg.set("spawndata.pitch", Math.round(playerLocation.getPitch()));
+            } else {
+                sender.sendMessage(ChatColor.RED + "There was an error while setting spawn pitch.");
+            }
+
+            if (cfg.contains("spawndata.yaw")) {
+                cfg.set("spawndata.yaw", Math.round(playerLocation.getYaw()));
+            } else {
+                sender.sendMessage(ChatColor.RED + "There was an error while setting spawn yaw.");
+            }
+
+            plugin.saveConfig();
+
             player.sendMessage(ChatColor.GREEN + "Spawn set!");
             return true;
         }

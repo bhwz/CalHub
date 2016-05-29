@@ -29,7 +29,10 @@ public class SpawnCommand implements CommandExecutor {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("messages.cmdnoperms")));
                 return true;
             }
+
             Location spawn = player.getWorld().getSpawnLocation();
+            spawn.setPitch(((float) cfg.getInt("spawndata.pitch")));
+            spawn.setYaw(((float) cfg.getInt("spawndata.yaw")));
             player.teleport(spawn);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("messages.spawntp")));
             return true;

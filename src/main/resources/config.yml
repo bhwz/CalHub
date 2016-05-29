@@ -1,9 +1,16 @@
+#Player events
 voidtp: true
+
+# World events
 noweather: true
 nofade: true
 noliquidflow: true
+
+# Joins
 clearchatonjoin: true
 joinspawn: true
+
+# Plugin language/formatting
 messages:
   join: "&2+&8{PLAYER}"
   quit: "&4-&8{PLAYER}"
@@ -16,3 +23,8 @@ messages:
     - This is line two, isn't that neat?
     - '&eThis is a yellow line with some &agreen text &eto spice things up.'
     - This is the last line in the default message, it's very long like a giraffe's neck. (You can have more than 4 lines btw.)
+
+# Everything below here is for internal use, do not hand edit unless you know what you're doing!
+spawndata:
+  pitch: 0
+  yaw: 0

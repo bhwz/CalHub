@@ -23,6 +23,8 @@ public class JoinListener implements Listener {
 
         if (cfg.getBoolean("joinspawn")) {
             Location spawn = event.getPlayer().getWorld().getSpawnLocation();
+            spawn.setPitch(((float) cfg.getInt("spawndata.pitch")));
+            spawn.setYaw(((float) cfg.getInt("spawndata.yaw")));
             event.getPlayer().teleport(spawn);
         }
 
