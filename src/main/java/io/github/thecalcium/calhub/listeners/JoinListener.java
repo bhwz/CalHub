@@ -20,6 +20,12 @@ public class JoinListener implements Listener {
         event.setJoinMessage(ChatColor.translateAlternateColorCodes
                 ('&', cfg.getString("messages.join").replace("{PLAYER}", event.getPlayer().getDisplayName())));
 
+        if (cfg.getBoolean("clearchatonjoin")) {
+            for (int i = 1; i < 64; i++) {
+                event.getPlayer().sendMessage("                ");
+            }
+        }
+
         for (String line : cfg.getStringList("messages.motd")) {
             event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&',
                     line.replace("{PLAYER}", event.getPlayer().getDisplayName())));

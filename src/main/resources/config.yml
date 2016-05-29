@@ -1,5 +1,6 @@
 voidtp: true
 noweather: true
+clearchatonjoin: true
 messages:
   join: "&2+&8{PLAYER}"
   quit: "&4-&8{PLAYER}"
