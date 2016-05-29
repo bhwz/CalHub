@@ -3,6 +3,7 @@ noweather: true
 nofade: true
 noliquidflow: true
 clearchatonjoin: true
+joinspawn: true
 messages:
   join: "&2+&8{PLAYER}"
   quit: "&4-&8{PLAYER}"

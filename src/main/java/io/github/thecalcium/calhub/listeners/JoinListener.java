@@ -2,6 +2,7 @@ package io.github.thecalcium.calhub.listeners;
 
 import io.github.thecalcium.calhub.CalHub;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,6 +20,11 @@ public class JoinListener implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         event.setJoinMessage(ChatColor.translateAlternateColorCodes
                 ('&', cfg.getString("messages.join").replace("{PLAYER}", event.getPlayer().getDisplayName())));
+
+        if (cfg.getBoolean("joinspawn")) {
+            Location spawn = event.getPlayer().getWorld().getSpawnLocation();
+            event.getPlayer().teleport(spawn);
+        }
 
         if (cfg.getBoolean("clearchatonjoin")) {
             for (int i = 1; i < 64; i++) {

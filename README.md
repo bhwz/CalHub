@@ -10,7 +10,8 @@ Currently does the following:
 + TP to spawn after falling into the void
 + Disables weather changes (can be disabled in the config)
 + Configurable MOTD on join
-+ Option to clear chat on join 
++ Option to clear chat on join
++ Option to have players tp to spawn on join
 + Option to disable water/lava flow
 + Option to disable "fading" (ice melt, leaf decay, etc.)
 
@@ -31,4 +32,3 @@ Permission nodes (unless otherwise stated, defaults to "op"):
 
 ToDo/Requested:
 + Option to disable growth and trampling
-+ Option to have players tp to spawn on join
