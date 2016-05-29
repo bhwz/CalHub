@@ -11,12 +11,10 @@ import org.bukkit.entity.Player;
 
 public class SpawnCommand implements CommandExecutor {
 
-    private final CalHub plugin;
-    private final FileConfiguration cfg;
+    FileConfiguration cfg;
 
     public SpawnCommand(CalHub plugin) {
-        this.plugin = plugin;
-        this.cfg = plugin.getConfig();
+        cfg = plugin.getConfig();
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
