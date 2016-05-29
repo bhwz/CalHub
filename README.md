@@ -14,5 +14,21 @@ Currently does the following:
 + Option to disable water/lava flow
 + Option to disable "fading" (ice melt, leaf decay, etc.)
 
+Commands:
++ /spawn - Teleports the user to the world spawn
++ /setspawn - Sets the world spawn point the user's current location
++ /motd - Displays the configured Message Of The Day
+
+Permission nodes (unless otherwise stated, defaults to "op"):
++ calhub.canplace
++ calhub.canbreak
++ calhub.canbucket
++ calhub.candrop
++ calhub.canpickup
++ calhub.spawn ("true" by default)
++ calhub.setspawn
++ calhub.motd ("true" by default)
+
 ToDo/Requested:
 + Option to disable growth and trampling
++ Option to have players tp to spawn on join
