@@ -12,6 +12,9 @@ public class CalHub extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
         getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
+        getServer().getPluginManager().registerEvents(new BlockFadeListener(this), this);
+        getServer().getPluginManager().registerEvents(new LiquidListener(this), this);
+        getServer().getPluginManager().registerEvents(new BucketListener(), this);
         getServer().getPluginManager().registerEvents(new ItemDropListener(), this);
         getServer().getPluginManager().registerEvents(new ItemPickupListener(), this);
         getServer().getPluginManager().registerEvents(new JoinListener(this), this);

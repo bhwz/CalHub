@@ -1,5 +1,7 @@
 voidtp: true
 noweather: true
+nofade: true
+noliquidflow: true
 clearchatonjoin: true
 messages:
   join: "&2+&8{PLAYER}"
