@@ -19,10 +19,15 @@ messages:
   voidtp: "&aYou fell into the void, so we moved you to spawn."
   cmdnoperms: "&cYou do not have permission to use this command!"
   motd:
-    - This is line one of the MOTD
-    - This is line two, isn't that neat?
+    - 'This is line one of the MOTD'
+    - 'This is line two, isnt that neat?'
     - '&eThis is a yellow line with some &agreen text &eto spice things up.'
-    - This is the last line in the default message, it's very long like a giraffe's neck. (You can have more than 4 lines btw.)
+    - 'This is the last line in the default message, its very long like a giraffe neck. (You can have more than 4 lines btw.)'
+  chatformat:
+      default: "&f{PLAYER} &8\u00BB &f{MESSAGE}"
+      vip: "&7[&5\u2764&7] &f{PLAYER} &8\u00BB &f{MESSAGE}"
+      mod: "&7[&9Mod&7] &f{PLAYER} &8\u00BB &f{MESSAGE}"
+      admin: "&7[&cAAdmin&7] &f{PLAYER} &8\u00BB &f{MESSAGE}"
 
 # Everything below here is for internal use, do not hand edit unless you know what you're doing!
 spawndata:
