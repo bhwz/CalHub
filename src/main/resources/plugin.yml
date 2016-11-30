@@ -1,6 +1,6 @@
 main: io.github.thecalcium.calhub.CalHub
 name: CalHub
-version: 0.02
+version: ${version}
 author: Calcium
 website: https://calcium.pw/
 
